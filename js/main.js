@@ -127,7 +127,7 @@ async function getLocation(lat, lon) {
         throw(new Error("You must provide latitue and longitude"));
     else {
 
-        const response = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${WEATHER_API_KEY}`);
+        const response = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&appid=${WEATHER_API_KEY}`);
 
 
         if (response.ok) return response.json();
